@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class CheckboxWithLabel extends Component {
 
@@ -14,6 +14,12 @@ class CheckboxWithLabel extends Component {
   }
 
   render() {
+    const {
+      index,
+      labelOn,
+      labelOff
+    } = this.props;
+
     return (
       <label className="btn-primary">
         <input
@@ -21,10 +27,16 @@ class CheckboxWithLabel extends Component {
           checked={this.state.isChecked}
           onChange={this.onChange}
         />
-        {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
+        {this.state.isChecked ? labelOn : labelOff} {index}
       </label>
     );
   }
+}
+
+CheckboxWithLabel.propTypes = {
+  index: PropTypes.string.isRequired,
+  labelOn: PropTypes.string.isRequired,
+  labelOff: PropTypes.string.isRequired
 }
 
 export default CheckboxWithLabel;
