@@ -15,7 +15,7 @@ class CheckboxWithLabel extends Component {
 
   render() {
     return (
-      <label>
+      <label className="btn-primary">
         <input
           type="checkbox"
           checked={this.state.isChecked}
