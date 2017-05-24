@@ -21,8 +21,7 @@ class CheckboxWithLabel extends Component {
     } = this.props;
 
     return (
-      <label className="checkbox-small">
-
+      <label className="btn-primary">
         <input
           type="checkbox"
           checked={this.state.isChecked}
