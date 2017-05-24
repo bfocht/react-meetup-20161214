@@ -22,6 +22,7 @@ class CheckboxWithLabel extends Component {
 
     return (
       <label className="checkbox-small">
+
         <input
           type="checkbox"
           checked={this.state.isChecked}
